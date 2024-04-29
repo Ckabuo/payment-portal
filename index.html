@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Fees Payment</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4 text-center">School Fees Payment</h1>
+        <!-- Form carousel -->
+        <div class="container">
+            <div id="carouselExampleControlsNoTouching" class="carousel slide carousel-fade" data-bs-touch="false">
+                <div class="carousel-inner carousel-custom">
+                    <!-- PersonalData formSection -->
+                    <div class="carousel-item active">
+                        <div id="personalDataForm" class="container">
+                            <h2 class="text-center">Personal Data</h2>
+                            <p class="form-text text-center">We'll never share your Personal Data with anyone else.</p>
+                            <form>
+                                <div class="row form-group mb-3">
+                                    <div class="col">
+                                      <input type="text" class="form-control" id="firstName" placeholder="First name" aria-label="First name" required>
+                                    </div>
+                                    <div class="col">
+                                      <input type="text" class="form-control" id="lastName" placeholder="Last name" aria-label="Last name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email" aria-label="Email" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="tel" class="form-control" id="phone" placeholder="Phone Number"  required>
+                                </div>
+                                <button type="button" class="btn btn-primary mb-3" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="showForm('educationDataForm')">
+                                    <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+                                    <span class="visually-hidden">Next</span>Next
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- educationData formSection -->
+                    <div class="carousel-item">
+                        <div id="educationDataForm" class="container">
+                            <h2 class="text-center">Education Data</h2>
+                            <form>
+                                <div class="form-group mb-3">
+                                    <select class="form-select form-control" aria-label="School Name" id="schoolName" disabled required>
+                                        <option selected>Gregory University Uturu</option>
+                                        <option value="school1">One</option>
+                                        <option value="school2">Two</option>
+                                        <option value="school3">Three</option>
+                                    </select>
+                                </div>
+                                <div class="row form-group mb-3">
+                                    <div class="col">
+                                        <select class="form-select form-control" id="college" aria-label="college" required>
+                                            <option selected>Select College</option>
+                                            <option value="school1">Agriculture</option>
+                                            <option value="school2">Allied Health Sciences</option>
+                                            <option value="school3">Basic Clinical Sciences</option>
+                                            <option value="school4">Basic Medical Sciences</option>
+                                            <option value="school5">Education</option>
+                                            <option value="school6">Engineering</option>
+                                            <option value="school7">Environmental Sciences</option>
+                                            <option value="school8">Humanities</option>
+                                            <option value="school9">Law</option>
+                                            <option value="school10">Natural & Applied Sciences</option>
+                                            <option value="school11">Pharmacy</option>
+                                            <option value="school12">Social & Management Sciences</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <select class="form-select form-control" id="department" aria-label="Department"  disabled required>
+                                            <option selected>Select Department</option>
+                                            <option value="school1">One</option>
+                                            <option value="school2">Two</option>
+                                            <option value="school3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row form-group mb-3">
+                                    <div class="col">
+                                        <input type="number" class="form-control" id="matNumber" placeholder="Enter Mat Number" aria-label="Matriculation Number" required>
+                                    </div>
+                                    <div class="col">
+                                        <select class="form-select form-control" id="studyYear" aria-label="Year of Study" required>
+                                            <option selected>Select Year of Study</option>
+                                            <option value="school1">100</option>
+                                            <option value="school2">200</option>
+                                            <option value="school3">300</option>
+                                            <option value="school3">400</option>
+                                            <option value="school3">500</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-primary mb-3" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="showForm('accommodationDataForm')">Next</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- accomodaationData formSection -->
+                  <div class="carousel-item">
+                    <div id="accommodationDataForm">
+                        <h2 class="text-center">Accommodation Data</h2>
+                        <form>
+                            <div class="row form-group mb-3">
+                                <div class="col">
+                                    <select class="form-select form-control" aria-label="Gender" id="gender" required>
+                                        <option selected>Gender</option>
+                                        <option value="school1">Male</option>
+                                        <option value="school2">Female</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <select class="form-select form-control" aria-label="Select Hostel" id="gender" required>
+                                        <option selected>Select Hostel</option>
+                                        <option value="school1">M - Hostel A</option>
+                                        <option value="school2">M - Hostel B</option>
+                                        <option value="school2">M - Hostel C</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row form-group mb-3">
+                                <div class="col">
+                                    <select class="form-select form-control" name="bedSpace" id="bedSpace" aria-label="Select Bed Space" required>
+                                        <option selected>Pick a room</option>
+                                        <option value="one">8-in-1 (common room)</option>
+                                        <option value="two">6-in-1 (Shared room)</option>
+                                        <option value="three">4-in-1 (Executive room)</option>
+                                        <option value="four">2-in-i (selfcon)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col">
+
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary mb-3" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" onclick="showForm('reviewData')">Proceed</button>
+                        </form>
+                    </div>
+                  </div>
+                  
+                  <!-- Review Section -->
+                    <div class="carousel-item">
+                        <div id="reviewData" style="display: none;">
+                            <h2>Review Your Data</h2>
+                            <form>
+                                <!-- Review fields would be dynamically generated here -->
+                                <button type="button" class="btn btn-primary" onclick="proceedToPaystack()">Proceed to Paystack</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button> -->
+                <!-- <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button> -->
+            </div>
+        </div>
+    </div>
+        
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./sandbox.js"></script>
+</body>
+</html>
