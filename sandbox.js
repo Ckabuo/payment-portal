@@ -1,16 +1,3 @@
-/* function showForm(formId) {
-    // Hide all forms
-    $('.form-container').hide();
-    // Show the specified form
-    $('#' + formId).show();
-}
-
-function proceedToPaystack() {
-    // Here you would typically collect the form data and proceed to the Paystack payment gateway
-    // For demonstration purposes, we'll just alert the user
-    alert('Proceeding to Paystack...');
-}*/
-
 function showForm(formId) {
     // Hide all forms
     document.querySelectorAll('.form-container').forEach(function(formContainer) {
@@ -25,7 +12,7 @@ function showForm(formId) {
 }
 
 // Function to dynamically generate review fields based on the data entered
-function generateReviewFields() {
+/*function generateReviewFields() {
     // Clear existing review fields
     $(`#reviewData`).empty();
 
@@ -72,17 +59,52 @@ function generateReviewFields() {
 
     // Show the review data form
     $('#reviewData').show();
-}
+}*/
 
 // Placeholder function for proceeding to Paystack
 function proceedToPaystack() {
-    // Here you would typically collect the form data and proceed to the Paystack payment gateway
-    // For demonstration purposes, we'll just alert the user
+
     alert('Proceeding to Paystack...');
 }
 
+// Code block to collect all form data
+function retrieveAllFormData() {
+    // Array of form IDs within the carousel
+    const formIds = [`personalDataForm`, `educationDataForm`, `accommodationDataForm`];
+
+    // Iterate over each form ID
+    formIds.forEach(function(formId) {
+        // Get the form container by its ID
+        let formContainer = document.getElementById(formId);
+        if (formContainer) {
+            // Find the form within the container
+            let form = formContainer.querySelector('form');
+            if (form) {
+                // Create an object to store the form data
+                let formData = {};
+
+                // Select all input and select elements within the form
+                let inputs = form.querySelectorAll('input, select');
+
+                // Iterate over each input and select element
+                inputs.forEach(function(input) {
+                    // Store the input's value in the formData object using the input's name as the key
+                    // If the input does not have a name, use its ID as the key
+                    let key = input.name || input.id;
+                    formData[key] = input.value;
+                });
+
+                // Log the formData object to the console
+                console.log(formData);
+            }
+        }
+    });
+}
+
+   
+
 // Initialize the first form to be shown
-$(document).ready(function() {
-    showForm('personalDataForm');
-});
+// $(document).ready(function() {
+//     showForm('personalDataForm');
+// });
 
