@@ -192,8 +192,50 @@
                         <div id="reviewData" style="display: none;">
                             <h2 class="text-center">Review Your Data</h2>
                             <form>
-                                <!-- Review fields would be dynamically generated here -->
-
+                                <div class="display-data container">
+                                    <div class="d-inline">
+                                        <h6 class="d-inline">First Name:</h6> <p class="d-inline" data-id="firstName"></p>
+                                        <br>
+                                        <h6 class="d-inline">Last Name:</h6> <p class="d-inline" data-id="lastName"></p>
+                                        <br>
+                                        <h6 class="d-inline">Email:</h6> <p class="d-inline" data-id="email"></p>
+                                        <br>
+                                        <h6 class="d-inline">Telephone:</h6> <p class="d-inline" data-id="phone"></p>
+                                        <br>
+                                        <a href="#personalDataForm" data-bs-target="#customCarouselForm" data-bs-slide="next" onclick="showForm('personalDataForm')" style="text-decoration: none; float: right;">
+                                            Edit
+                                        </a>
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <h6 class="d-inline">Institution:</h6> <p class="d-inline" data-id="schoolName"></p>
+                                        <br>
+                                        <h6 class="d-inline">College:</h6> <p class="d-inline" data-id="college"></p>
+                                        <br>
+                                        <h6 class="d-inline">Department:</h6> <p class="d-inline" data-id="department"></p>
+                                        <br>
+                                        <h6 class="d-inline">Mat. No.:</h6> <p class="d-inline" data-id="matNumber"></p>
+                                        <br>
+                                        <h6 class="d-inline">Level:</h6> <p class="d-inline" data-id="studyYear"></p>
+                                        <br>
+                                        <a href="#educationDataForm" data-bs-target="#customCarouselForm" data-bs-slide="prev" onclick="showForm('educationDataForm')" style="text-decoration: none; float: right;">
+                                            Edit
+                                        </a>
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <h6 class="d-inline">Gender:</h6> <p class="d-inline" data-id="gender"></p>
+                                        <br>
+                                        <h6 class="d-inline">Hostel:</h6> <p class="d-inline" data-id="hostel"></p>
+                                        <br>
+                                        <h6 class="d-inline">Room:</h6> <p class="d-inline" data-id="bedSpace"></p>
+                                        <br>
+                                        <a href="#accommodationDataForm" data-bs-target="#customCarouselForm" data-bs-slide="prev" onclick="showForm('accommodationDataForm')" style="text-decoration: none; float: right;">
+                                            Edit
+                                        </a>
+                                    </div>
+                                </div>
+                                <br>
                                 <div class="text-center">
                                     <button type="button" class="btn btn-primary" onclick="proceedToPaystack()">Proceed to Paystack</button>
                                 </div>
